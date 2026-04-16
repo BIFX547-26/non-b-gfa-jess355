@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "non-b-gfa"
+version = "0.1.0"
+description = "Python reimplementation of the legacy non-B GFA motif finder"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Duncan E. Donohue" },
+]
+dependencies = []
+
+[project.scripts]
+gfa = "non_b_gfa.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
